@@ -29,18 +29,34 @@
             #endregion
 
             #region Q3
-            Console.Write("Enter a number: ");
-            int number = int.Parse(Console.ReadLine());
+            //Console.Write("Enter a number: ");
+            //int number = int.Parse(Console.ReadLine());
 
-            Console.WriteLine($"The number is {number}");
+            //Console.WriteLine($"The number is {number}");
 
-            for (int i = 1; i <= number; i++)
+            //for (int i = 1; i <= number; i++)
+            //{
+            //    if (i % 2 == 0)
+            //    {
+            //    Console.Write($" {i} ");
+            //    }
+            //}
+            #endregion
+
+            #region Q4
+            Console.Write("Enter the base number: ");
+            int baseNumber = int.Parse(Console.ReadLine());
+            Console.Write("Enter the power number: ");
+            int powerNumber = int.Parse(Console.ReadLine());
+
+            int total = 1;
+
+            for (int i = 0; i < powerNumber; i++)
             {
-                if (i % 2 == 0)
-                {
-                Console.Write($" {i} ");
-                }
+                total *= baseNumber;
             }
+
+            Console.WriteLine($"The answer is {total}");
             #endregion
         }
     }
