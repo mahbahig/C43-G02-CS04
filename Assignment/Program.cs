@@ -44,19 +44,33 @@
             #endregion
 
             #region Q4
-            Console.Write("Enter the base number: ");
-            int baseNumber = int.Parse(Console.ReadLine());
-            Console.Write("Enter the power number: ");
-            int powerNumber = int.Parse(Console.ReadLine());
+            //Console.Write("Enter the base number: ");
+            //int baseNumber = int.Parse(Console.ReadLine());
+            //Console.Write("Enter the power number: ");
+            //int powerNumber = int.Parse(Console.ReadLine());
 
-            int total = 1;
+            //int total = 1;
 
-            for (int i = 0; i < powerNumber; i++)
+            //for (int i = 0; i < powerNumber; i++)
+            //{
+            //    total *= baseNumber;
+            //}
+
+            //Console.WriteLine($"The answer is {total}");
+            #endregion
+
+            #region Q5
+            Console.Write("Enter a word: ");
+            string word = Console.ReadLine();
+
+            string reverseWord = "";
+
+            for (int i = word.Length - 1; i >= 0; i--)
             {
-                total *= baseNumber;
+                reverseWord += word[i];
             }
 
-            Console.WriteLine($"The answer is {total}");
+            Console.WriteLine($"The reverse word is {reverseWord}");
             #endregion
         }
     }
