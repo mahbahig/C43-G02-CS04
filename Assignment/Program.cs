@@ -322,40 +322,53 @@
             #endregion
 
             #region Q18
-            int[][] first = new int[3][];
-            first[0] = new int[3];
-            first[1] = new int[3];
-            first[2] = new int[3];
+            //int[][] first = new int[3][];
+            //first[0] = new int[3];
+            //first[1] = new int[3];
+            //first[2] = new int[3];
 
-            int[][] second = new int[3][];
-            second[0] = new int[3];
-            second[1] = new int[3];
-            second[2] = new int[3];
+            //int[][] second = new int[3][];
+            //second[0] = new int[3];
+            //second[1] = new int[3];
+            //second[2] = new int[3];
 
+            //for (int i = 0; i < first.Length; i++)
+            //{
+            //    for (int j = 0; j < first[i].Length; j++)
+            //    {
+            //        Console.Write($"Enter the number to be stored in [{i}][{j}]: ");
+            //        first[i][j] = int.Parse(Console.ReadLine());
+            //    }
+            //}
+            //for (int i = 0; i < first.Length; i++)
+            //{
+            //    for (int j = 0; j < first[i].Length; j++)
+            //    {
+            //        second[i][j] = first[i][j];
+            //    }
+            //}
+            //for (int i = 0; i < first.Length; i++)
+            //{
+            //    for (int j = 0; j < first[i].Length; j++)
+            //    {
+            //        Console.Write($" {second[i][j]} ");
+            //    }
+            //    Console.WriteLine();
+            //}
+
+            #endregion
+
+            #region Q19
+            int[] first = { 1, 2, 3, 4, 5 };
+            int[] reversed = new int[first.Length];
             for (int i = 0; i < first.Length; i++)
             {
-                for (int j = 0; j < first[i].Length; j++)
-                {
-                    Console.Write($"Enter the number to be stored in [{i}][{j}]: ");
-                    first[i][j] = int.Parse(Console.ReadLine());
-                }
+                reversed[i] = first[first.Length - 1 - i];
             }
-            for (int i = 0; i < first.Length; i++)
+            foreach (int item in reversed)
             {
-                for (int j = 0; j < first[i].Length; j++)
-                {
-                    second[i][j] = first[i][j];
-                }
+                Console.Write($" {item} ");
             }
-            for (int i = 0; i < first.Length; i++)
-            {
-                for (int j = 0; j < first[i].Length; j++)
-                {
-                    Console.Write($" {second[i][j]} ");
-                }
-                Console.WriteLine();
-            }
-
             #endregion
         }
     }
