@@ -203,36 +203,63 @@
             #endregion
 
             #region Q13
-            int[] first = { 1, 3, 5 };
-            int[] second = { 2, 4, 6 };
+            //int[] first = { 1, 3, 5 };
+            //int[] second = { 2, 4, 6 };
 
-            int[] combined = new int[first.Length + second.Length];
+            //int[] combined = new int[first.Length + second.Length];
 
-            int firstIndex = 0, secondIndex = 0, combinedIndex = 0;
-            while (firstIndex < first.Length && secondIndex < second.Length)
+            //int firstIndex = 0, secondIndex = 0, combinedIndex = 0;
+            //while (firstIndex < first.Length && secondIndex < second.Length)
+            //{
+            //    if (first[firstIndex] < second[secondIndex])
+            //    {
+            //        combined[combinedIndex++] = first[firstIndex++];
+            //    }
+            //    else
+            //    {
+            //        combined[combinedIndex++] = second[secondIndex++];
+            //    }
+            //}
+            //while (firstIndex < first.Length)
+            //{
+            //    combined[combinedIndex++] = first[firstIndex++];
+            //}
+            //while (secondIndex < second.Length)
+            //{
+            //    combined[combinedIndex++] = second[secondIndex++];
+            //}
+            //foreach (var item in combined)
+            //{
+            //    Console.Write($" {item} ");
+            //}
+            #endregion
+
+            #region Q14
+            int[] array = { 5, 3, 5, 1, 3, 5 };
+
+            Console.WriteLine("Frequency of each element:");
+            for (int i = 0; i < array.Length; i++)
             {
-                if (first[firstIndex] < second[secondIndex])
+                bool alreadyCounted = false;
+                for (int k = 0; k < i; k++)
                 {
-                    combined[combinedIndex++] = first[firstIndex++];
+                    if (array[i] == array[k])
+                    {
+                        alreadyCounted = true;
+                        break;
+                    }
                 }
-                else
+                if (alreadyCounted) continue;
+                int count = 1;
+                for (int j = i + 1; j < array.Length; j++)
                 {
-                    combined[combinedIndex++] = second[secondIndex++];
+                    if (array[i] == array[j])
+                    {
+                        count++;
+                    }
                 }
+                Console.WriteLine($"Element {array[i]} occurs {count} times.");
             }
-            while (firstIndex < first.Length)
-            {
-                combined[combinedIndex++] = first[firstIndex++];
-            }
-            while (secondIndex < second.Length)
-            {
-                combined[combinedIndex++] = second[secondIndex++];
-            }
-            foreach (var item in combined)
-            {
-                Console.Write($" {item} ");
-            }
-
             #endregion
         }
     }
