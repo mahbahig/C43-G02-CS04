@@ -193,13 +193,46 @@
             #endregion
 
             #region Q12
-            int[] numbers = { 1, 2, 3 };
-            int sum = 0;
-            foreach (int number in numbers)
+            //int[] numbers = { 1, 2, 3 };
+            //int sum = 0;
+            //foreach (int number in numbers)
+            //{
+            //    sum += number;
+            //}
+            //Console.WriteLine(sum);
+            #endregion
+
+            #region Q13
+            int[] first = { 1, 3, 5 };
+            int[] second = { 2, 4, 6 };
+
+            int[] combined = new int[first.Length + second.Length];
+
+            int firstIndex = 0, secondIndex = 0, combinedIndex = 0;
+            while (firstIndex < first.Length && secondIndex < second.Length)
             {
-                sum += number;
+                if (first[firstIndex] < second[secondIndex])
+                {
+                    combined[combinedIndex++] = first[firstIndex++];
+                }
+                else
+                {
+                    combined[combinedIndex++] = second[secondIndex++];
+                }
             }
-            Console.WriteLine(sum);
+            while (firstIndex < first.Length)
+            {
+                combined[combinedIndex++] = first[firstIndex++];
+            }
+            while (secondIndex < second.Length)
+            {
+                combined[combinedIndex++] = second[secondIndex++];
+            }
+            foreach (var item in combined)
+            {
+                Console.Write($" {item} ");
+            }
+
             #endregion
         }
     }
