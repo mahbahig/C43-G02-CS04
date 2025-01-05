@@ -60,17 +60,48 @@
             #endregion
 
             #region Q5
-            Console.Write("Enter a word: ");
-            string word = Console.ReadLine();
+            //Console.Write("Enter a word: ");
+            //string word = Console.ReadLine();
 
-            string reverseWord = "";
+            //string reverseWord = "";
 
-            for (int i = word.Length - 1; i >= 0; i--)
+            //for (int i = word.Length - 1; i >= 0; i--)
+            //{
+            //    reverseWord += word[i];
+            //}
+
+            //Console.WriteLine($"The reverse word is {reverseWord}");
+            #endregion
+
+            #region Q6
+            Console.Write("Input starting number of range: ");
+            int start = int.Parse(Console.ReadLine());
+            Console.Write("Input ending number of range: ");
+            int end = int.Parse(Console.ReadLine());
+
+            Console.WriteLine($"The prime number between {start} and {end} are :");
+
+            bool isPrime;
+
+            for (int i = start; i < end; i++)
             {
-                reverseWord += word[i];
+                isPrime = true;
+                for (int j = 2; j < 9; j++)
+                {
+                    if (i % j == 0 && i != j) {
+                        isPrime = false;
+                        break;
+                    }
+                }
+                if (i == 1)
+                {
+                    isPrime = false;
+                }
+                if (isPrime)
+                {
+                    Console.Write($" {i} ");
+                }
             }
-
-            Console.WriteLine($"The reverse word is {reverseWord}");
             #endregion
         }
     }
