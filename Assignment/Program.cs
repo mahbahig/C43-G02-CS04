@@ -121,24 +121,44 @@
             #endregion
 
             #region Q8
-            Console.Write("Enter a number: ");
-            int number = int.Parse(Console.ReadLine());
+            //Console.Write("Enter a number: ");
+            //int number = int.Parse(Console.ReadLine());
 
-            for (int i = 0; i < number; i++)
+            //for (int i = 0; i < number; i++)
+            //{
+            //    for (int j = 0; j < number; j++)
+            //    {
+            //        if (j == i)
+            //        {
+            //            Console.Write($" {1} ");
+            //        }
+            //        else
+            //        {
+            //            Console.Write($" {0} ");
+            //        }
+            //    }
+            //    Console.WriteLine();
+            //}
+            #endregion
+
+            #region Q9
+            Console.Write("Enter a word: ");
+            string word = Console.ReadLine();
+
+            Console.Write("Enter the start of the substring: ");
+            int start = int.Parse(Console.ReadLine());
+
+            Console.Write("Enter the end of the substring: ");
+            int end = int.Parse(Console.ReadLine());
+
+            string subString = "";
+
+            for (int i = start; i < end; i++)
             {
-                for (int j = 0; j < number; j++)
-                {
-                    if (j == i)
-                    {
-                        Console.Write($" {1} ");
-                    }
-                    else
-                    {
-                        Console.Write($" {0} ");
-                    }
-                }
-                Console.WriteLine();
+                subString += word[i];
             }
+            Console.WriteLine($"The substring is: {subString}");
+
             #endregion
         }
     }
