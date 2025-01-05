@@ -74,34 +74,50 @@
             #endregion
 
             #region Q6
-            Console.Write("Input starting number of range: ");
-            int start = int.Parse(Console.ReadLine());
-            Console.Write("Input ending number of range: ");
-            int end = int.Parse(Console.ReadLine());
+            //Console.Write("Input starting number of range: ");
+            //int start = int.Parse(Console.ReadLine());
+            //Console.Write("Input ending number of range: ");
+            //int end = int.Parse(Console.ReadLine());
 
-            Console.WriteLine($"The prime number between {start} and {end} are :");
+            //Console.WriteLine($"The prime number between {start} and {end} are :");
 
-            bool isPrime;
+            //bool isPrime;
 
-            for (int i = start; i < end; i++)
+            //for (int i = start; i < end; i++)
+            //{
+            //    isPrime = true;
+            //    for (int j = 2; j < 9; j++)
+            //    {
+            //        if (i % j == 0 && i != j) {
+            //            isPrime = false;
+            //            break;
+            //        }
+            //    }
+            //    if (i == 1)
+            //    {
+            //        isPrime = false;
+            //    }
+            //    if (isPrime)
+            //    {
+            //        Console.Write($" {i} ");
+            //    }
+            //}
+            #endregion
+
+            #region Q7
+            Console.Write("Enter a number to convert : ");
+            int number = int.Parse(Console.ReadLine());
+
+            string binary = "";
+            while (number > 0)
             {
-                isPrime = true;
-                for (int j = 2; j < 9; j++)
-                {
-                    if (i % j == 0 && i != j) {
-                        isPrime = false;
-                        break;
-                    }
-                }
-                if (i == 1)
-                {
-                    isPrime = false;
-                }
-                if (isPrime)
-                {
-                    Console.Write($" {i} ");
-                }
+                int remainder = number % 2;
+                binary = remainder + binary;
+                number /= 2;
+                Console.WriteLine(number);
             }
+
+            Console.WriteLine($"The binary representation is {binary}");
             #endregion
         }
     }
