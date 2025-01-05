@@ -105,19 +105,40 @@
             #endregion
 
             #region Q7
-            Console.Write("Enter a number to convert : ");
+            //Console.Write("Enter a number to convert : ");
+            //int number = int.Parse(Console.ReadLine());
+
+            //string binary = "";
+            //while (number > 0)
+            //{
+            //    int remainder = number % 2;
+            //    binary = remainder + binary;
+            //    number /= 2;
+            //    Console.WriteLine(number);
+            //}
+
+            //Console.WriteLine($"The binary representation is {binary}");
+            #endregion
+
+            #region Q8
+            Console.Write("Enter a number: ");
             int number = int.Parse(Console.ReadLine());
 
-            string binary = "";
-            while (number > 0)
+            for (int i = 0; i < number; i++)
             {
-                int remainder = number % 2;
-                binary = remainder + binary;
-                number /= 2;
-                Console.WriteLine(number);
+                for (int j = 0; j < number; j++)
+                {
+                    if (j == i)
+                    {
+                        Console.Write($" {1} ");
+                    }
+                    else
+                    {
+                        Console.Write($" {0} ");
+                    }
+                }
+                Console.WriteLine();
             }
-
-            Console.WriteLine($"The binary representation is {binary}");
             #endregion
         }
     }
