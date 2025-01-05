@@ -172,24 +172,34 @@
             #endregion
 
             #region Q11
-            Console.Write("Enter a number: ");
-            int number = int.Parse(Console.ReadLine());
+            //Console.Write("Enter a number: ");
+            //int number = int.Parse(Console.ReadLine());
 
-            for (int i = 0; i < number; i++)
+            //for (int i = 0; i < number; i++)
+            //{
+            //    for (int j = 0; j < number; j++)
+            //    {
+            //        if (j == i)
+            //        {
+            //            Console.Write($" {1} ");
+            //        }
+            //        else
+            //        {
+            //            Console.Write($" {0} ");
+            //        }
+            //    }
+            //    Console.WriteLine();
+            //}
+            #endregion
+
+            #region Q12
+            int[] numbers = { 1, 2, 3 };
+            int sum = 0;
+            foreach (int number in numbers)
             {
-                for (int j = 0; j < number; j++)
-                {
-                    if (j == i)
-                    {
-                        Console.Write($" {1} ");
-                    }
-                    else
-                    {
-                        Console.Write($" {0} ");
-                    }
-                }
-                Console.WriteLine();
+                sum += number;
             }
+            Console.WriteLine(sum);
             #endregion
         }
     }
