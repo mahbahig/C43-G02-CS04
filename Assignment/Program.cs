@@ -142,23 +142,33 @@
             #endregion
 
             #region Q9
+            //Console.Write("Enter a word: ");
+            //string word = Console.ReadLine();
+
+            //Console.Write("Enter the start of the substring: ");
+            //int start = int.Parse(Console.ReadLine());
+
+            //Console.Write("Enter the end of the substring: ");
+            //int end = int.Parse(Console.ReadLine());
+
+            //string subString = "";
+
+            //for (int i = start; i < end; i++)
+            //{
+            //    subString += word[i];
+            //}
+            //Console.WriteLine($"The substring is: {subString}");
+
+            #endregion
+
+            #region Q10
             Console.Write("Enter a word: ");
             string word = Console.ReadLine();
+            Console.Write("Enter another word: ");
+            string word2 = Console.ReadLine();
 
-            Console.Write("Enter the start of the substring: ");
-            int start = int.Parse(Console.ReadLine());
-
-            Console.Write("Enter the end of the substring: ");
-            int end = int.Parse(Console.ReadLine());
-
-            string subString = "";
-
-            for (int i = start; i < end; i++)
-            {
-                subString += word[i];
-            }
-            Console.WriteLine($"The substring is: {subString}");
-
+            string combinedWord = word + word2;
+            Console.Write(combinedWord);
             #endregion
         }
     }
