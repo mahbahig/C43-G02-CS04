@@ -235,31 +235,51 @@
             #endregion
 
             #region Q14
-            int[] array = { 5, 3, 5, 1, 3, 5 };
+            //int[] array = { 5, 3, 5, 1, 3, 5 };
 
-            Console.WriteLine("Frequency of each element:");
-            for (int i = 0; i < array.Length; i++)
+            //Console.WriteLine("Frequency of each element:");
+            //for (int i = 0; i < array.Length; i++)
+            //{
+            //    bool alreadyCounted = false;
+            //    for (int k = 0; k < i; k++)
+            //    {
+            //        if (array[i] == array[k])
+            //        {
+            //            alreadyCounted = true;
+            //            break;
+            //        }
+            //    }
+            //    if (alreadyCounted) continue;
+            //    int count = 1;
+            //    for (int j = i + 1; j < array.Length; j++)
+            //    {
+            //        if (array[i] == array[j])
+            //        {
+            //            count++;
+            //        }
+            //    }
+            //    Console.WriteLine($"Element {array[i]} occurs {count} times.");
+            //}
+            #endregion
+
+            #region Q15
+            int[] number = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+            int min = 999999999;
+            int max = 0;
+            for (int i = 0; i < number.Length; i++)
             {
-                bool alreadyCounted = false;
-                for (int k = 0; k < i; k++)
+                if (number[i] > max)
                 {
-                    if (array[i] == array[k])
-                    {
-                        alreadyCounted = true;
-                        break;
-                    }
+                    max = number[i];
                 }
-                if (alreadyCounted) continue;
-                int count = 1;
-                for (int j = i + 1; j < array.Length; j++)
+                if (number[i] < min)
                 {
-                    if (array[i] == array[j])
-                    {
-                        count++;
-                    }
+                    min = number[i];
                 }
-                Console.WriteLine($"Element {array[i]} occurs {count} times.");
             }
+            Console.WriteLine($"The maximum number is {max}");
+            Console.WriteLine($"The minumum number is {min}");
+
             #endregion
         }
     }
