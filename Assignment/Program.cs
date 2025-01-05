@@ -263,22 +263,38 @@
             #endregion
 
             #region Q15
+            //int[] number = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+            //int min = 999999999;
+            //int max = 0;
+            //for (int i = 0; i < number.Length; i++)
+            //{
+            //    if (number[i] > max)
+            //    {
+            //        max = number[i];
+            //    }
+            //    if (number[i] < min)
+            //    {
+            //        min = number[i];
+            //    }
+            //}
+            //Console.WriteLine($"The maximum number is {max}");
+            //Console.WriteLine($"The minumum number is {min}");
+
+            #endregion
+
+            #region Q16
             int[] number = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
-            int min = 999999999;
             int max = 0;
+            int secondMax = 0;
             for (int i = 0; i < number.Length; i++)
             {
                 if (number[i] > max)
                 {
+                    secondMax = max;
                     max = number[i];
                 }
-                if (number[i] < min)
-                {
-                    min = number[i];
-                }
             }
-            Console.WriteLine($"The maximum number is {max}");
-            Console.WriteLine($"The minumum number is {min}");
+            Console.WriteLine($"The second maximum number is {secondMax}");
 
             #endregion
         }
