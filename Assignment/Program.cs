@@ -299,26 +299,63 @@
             #endregion
 
             #region Q17
-            int[] number = new int[8];
-            for (int i = 0; i < number.Length; i++)
+            //int[] number = new int[8];
+            //for (int i = 0; i < number.Length; i++)
+            //{
+            //    Console.Write($"Enter the number to be stored in index {i}: ");
+            //    number[i] = int.Parse(Console.ReadLine());
+            //}
+            //int longest = 0;
+            //for (int i = 0; i < number.Length; i++)
+            //{
+            //    int index = 0;
+            //    for (int j = 0; j < number.Length; j++)
+            //    {
+            //        if (number[i] == number[j])
+            //        {
+            //            longest = j - index;
+            //            index = j;
+            //        }
+            //    }
+            //}
+            //Console.WriteLine(longest);
+            #endregion
+
+            #region Q18
+            int[][] first = new int[3][];
+            first[0] = new int[3];
+            first[1] = new int[3];
+            first[2] = new int[3];
+
+            int[][] second = new int[3][];
+            second[0] = new int[3];
+            second[1] = new int[3];
+            second[2] = new int[3];
+
+            for (int i = 0; i < first.Length; i++)
             {
-                Console.Write($"Enter the number to be stored in index {i}: ");
-                number[i] = int.Parse(Console.ReadLine());
-            }
-            int longest = 0;
-            for (int i = 0; i < number.Length; i++)
-            {
-                int index = 0;
-                for (int j = 0; j < number.Length; j++)
+                for (int j = 0; j < first[i].Length; j++)
                 {
-                    if (number[i] == number[j])
-                    {
-                        longest = j - index;
-                        index = j;
-                    }
+                    Console.Write($"Enter the number to be stored in [{i}][{j}]: ");
+                    first[i][j] = int.Parse(Console.ReadLine());
                 }
             }
-            Console.WriteLine(longest);
+            for (int i = 0; i < first.Length; i++)
+            {
+                for (int j = 0; j < first[i].Length; j++)
+                {
+                    second[i][j] = first[i][j];
+                }
+            }
+            for (int i = 0; i < first.Length; i++)
+            {
+                for (int j = 0; j < first[i].Length; j++)
+                {
+                    Console.Write($" {second[i][j]} ");
+                }
+                Console.WriteLine();
+            }
+
             #endregion
         }
     }
