@@ -162,13 +162,34 @@
             #endregion
 
             #region Q10
-            Console.Write("Enter a word: ");
-            string word = Console.ReadLine();
-            Console.Write("Enter another word: ");
-            string word2 = Console.ReadLine();
+            //Console.Write("Enter a word: ");
+            //string word = Console.ReadLine();
+            //Console.Write("Enter another word: ");
+            //string word2 = Console.ReadLine();
 
-            string combinedWord = word + word2;
-            Console.Write(combinedWord);
+            //string combinedWord = word + word2;
+            //Console.Write(combinedWord);
+            #endregion
+
+            #region Q11
+            Console.Write("Enter a number: ");
+            int number = int.Parse(Console.ReadLine());
+
+            for (int i = 0; i < number; i++)
+            {
+                for (int j = 0; j < number; j++)
+                {
+                    if (j == i)
+                    {
+                        Console.Write($" {1} ");
+                    }
+                    else
+                    {
+                        Console.Write($" {0} ");
+                    }
+                }
+                Console.WriteLine();
+            }
             #endregion
         }
     }
