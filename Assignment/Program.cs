@@ -283,19 +283,42 @@
             #endregion
 
             #region Q16
-            int[] number = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
-            int max = 0;
-            int secondMax = 0;
+            //int[] number = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+            //int max = 0;
+            //int secondMax = 0;
+            //for (int i = 0; i < number.Length; i++)
+            //{
+            //    if (number[i] > max)
+            //    {
+            //        secondMax = max;
+            //        max = number[i];
+            //    }
+            //}
+            //Console.WriteLine($"The second maximum number is {secondMax}");
+
+            #endregion
+
+            #region Q17
+            int[] number = new int[8];
             for (int i = 0; i < number.Length; i++)
             {
-                if (number[i] > max)
+                Console.Write($"Enter the number to be stored in index {i}: ");
+                number[i] = int.Parse(Console.ReadLine());
+            }
+            int longest = 0;
+            for (int i = 0; i < number.Length; i++)
+            {
+                int index = 0;
+                for (int j = 0; j < number.Length; j++)
                 {
-                    secondMax = max;
-                    max = number[i];
+                    if (number[i] == number[j])
+                    {
+                        longest = j - index;
+                        index = j;
+                    }
                 }
             }
-            Console.WriteLine($"The second maximum number is {secondMax}");
-
+            Console.WriteLine(longest);
             #endregion
         }
     }
